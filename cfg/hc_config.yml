@@ -1,0 +1,27 @@
+# Absolute path to repo
+# For Windows users, assumes that C:/ is the root
+repo_path: path/to/phylo2vec # CHANGE
+
+# Path to FASTA data
+fasta_path: h3n2_na_20.fa # CHANGE
+
+# Path to RAxML-NG binary
+raxml_path: path/to/raxml-ng_v1.1.0_linux_x86_64/ # CHANGE
+
+# Substitution model
+substitution_model: GTR
+
+# If True, use rooted trees
+rooted: False
+
+# Random seed
+seed: null
+
+# Max seed number
+max_seed: 42
+
+# Max number of rounds without improvement
+patience: 3
+
+# Debugging mode
+debug: True
