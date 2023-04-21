@@ -286,7 +286,7 @@ def newick2v(nw, n_leaves=None, ete3_format=1, reroot=False):
         if n_leaves is None:
             # INFO: fastest when n_leaves is used, this is just in case
             # TODO: n_leaves as non-optional argument?
-            n_leaves = max([int(s) for s in re.findall(POS_INT_PATTERN, nw)]) + 1
+            n_leaves = max(int(s) for s in re.findall(POS_INT_PATTERN, nw)) + 1
 
     # Phylo2Vec vector
     v = np.zeros(n_leaves, dtype=np.int16)
@@ -331,8 +331,7 @@ def newick2v(nw, n_leaves=None, ete3_format=1, reroot=False):
                         break
 
                     # Reset the left_leaf if it wasn't a digit
-                    else:
-                        left_leaf = ''
+                    left_leaf = ''
 
             left_leaf_ind = np.arange(len(labels))[labels == int(left_leaf)][0]
             right_leaf = n_leaves - i - 1

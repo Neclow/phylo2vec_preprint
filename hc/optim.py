@@ -140,7 +140,7 @@ def optimise_single(cfg, v_current, taxa_dict, rounds=1, debug=False):
 
 
 def grad_single(cfg, v_proposal, current_loss, taxa_dict, i):
-    """Calculate gradients for
+    """Calculate gradients for a single index of v
 
     Parameters
     ----------
